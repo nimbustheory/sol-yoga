@@ -93,6 +93,7 @@ export default function DemoWrapper() {
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           {c.salesCards.map((card, i) => {
             const IconComp = getIcon(card.icon);
+            const isAdminCard = card.title === "Admin Dashboard";
             return (
               <div key={i} style={{ background: "#12121a", border: "1px solid #1e1e28", borderRadius: 14, padding: "18px 16px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
@@ -101,7 +102,16 @@ export default function DemoWrapper() {
                   </div>
                   <h3 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 18, fontWeight: 600, color: "#fff", margin: 0 }}>{card.title}</h3>
                 </div>
-                <p style={{ fontSize: 12, color: "#787068", lineHeight: 1.6, margin: 0 }}>{card.description}</p>
+                <p style={{ fontSize: 12, color: "#787068", lineHeight: 1.6, margin: isAdminCard ? "0 0 14px" : 0 }}>{card.description}</p>
+                {isAdminCard && (
+                  <button onClick={() => window.dispatchEvent(new Event("open-admin"))} style={{
+                    width: "100%", padding: "10px 0", borderRadius: 8, border: "none",
+                    background: accent, color: "#fff", fontWeight: 700, fontSize: 13,
+                    cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6
+                  }}>
+                    <Shield size={15} /> Open Admin
+                  </button>
+                )}
               </div>
             );
           })}

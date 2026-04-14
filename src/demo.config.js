@@ -20,7 +20,7 @@ export const DEMO_CONFIG = {
     {
       title: "Admin Dashboard",
       description: "Real-time analytics across both SOL Up (55 capacity) and SOL Down (45 capacity). Track attendance, revenue, class popularity, and member engagement. Manage two studios plus seasonal Dock Yoga from a single dashboard.",
-      icon: "LayoutDashboard",
+      icon: "Shield",
     },
     {
       title: "Built for SOL Yoga",
