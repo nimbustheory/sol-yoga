@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, createContext, useContext, useRef } from "react";
+import { createPortal } from "react-dom";
 import {
   Home, Calendar, TrendingUp, Users, CreditCard, CalendarDays,
   Menu, X, Bell, Settings, Shield, ChevronRight, ChevronDown, Clock,
@@ -1139,7 +1140,7 @@ export default function App() {
   const unreadCount = 2;
 
   if (isAdmin) {
-    return (
+    return createPortal(
       <AppContext.Provider value={{ page, setPage, classRegistrations, registerForClass, openReservation, feedCelebrations, celebrateFeed }}>
         <div style={{ position: "fixed", inset: 0, zIndex: 9999, display: "flex", fontFamily: "'Hanken Grotesk', system-ui, sans-serif", background: "#f5f5f7" }}>
           <aside style={{ width: 230, background: "#ffffff", borderRight: "1px solid #e5e7eb", display: "flex", flexDirection: "column", flexShrink: 0 }}>
@@ -1161,7 +1162,8 @@ export default function App() {
           </aside>
           <main style={{ flex: 1, padding: 24, overflow: "auto" }}>{renderPage()}</main>
         </div>
-      </AppContext.Provider>
+      </AppContext.Provider>,
+      document.body
     );
   }
 
