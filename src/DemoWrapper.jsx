@@ -15,13 +15,13 @@ export default function DemoWrapper() {
   const accentDark = c.accentDark;
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh", background: "#08080c", fontFamily: "'Outfit', system-ui, sans-serif", color: "#e0dcd4" }}>
+    <div style={{ display: "flex", minHeight: "100vh", background: "#f5f5f5", fontFamily: "'Outfit', system-ui, sans-serif", color: "#1a2028" }}>
 
       {/* ——— LEFT SIDEBAR ——— */}
-      <aside style={{ width: 320, flexShrink: 0, background: "#0d0d14", borderRight: "1px solid #1a1a24", display: "flex", flexDirection: "column", position: "fixed", top: 0, left: 0, bottom: 0, zIndex: 10, overflowY: "auto" }}>
+      <aside style={{ width: 320, flexShrink: 0, background: "#ffffff", borderRight: "1px solid #e5e7eb", display: "flex", flexDirection: "column", position: "fixed", top: 0, left: 0, bottom: 0, zIndex: 10, overflowY: "auto" }}>
         {/* Prototype Label */}
         <div style={{ padding: "16px 24px 0" }}>
-          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: accent, background: `${accent}15`, padding: "4px 10px", borderRadius: 4 }}>Prototype Demo</span>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: accent, background: `${accent}12`, padding: "4px 10px", borderRadius: 4 }}>Prototype Demo</span>
         </div>
 
         {/* Studio Identity */}
@@ -31,24 +31,24 @@ export default function DemoWrapper() {
               {c.studio.logo}
             </div>
             <div>
-              <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 18, fontWeight: 600, letterSpacing: "0.02em", color: "#fff" }}>{c.studio.name}</div>
-              <div style={{ fontSize: 11, color: "#787068", marginTop: 1 }}>{c.studio.tagline}</div>
+              <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: 18, fontWeight: 600, letterSpacing: "0.02em", color: "#1a2028" }}>{c.studio.name}</div>
+              <div style={{ fontSize: 11, color: "#6b7280", marginTop: 1 }}>{c.studio.tagline}</div>
             </div>
           </div>
         </div>
 
         {/* Feature List */}
         <div style={{ padding: "0 24px", flex: 1 }}>
-          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#585048", marginBottom: 12 }}>App Features</div>
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9ca3af", marginBottom: 12 }}>App Features</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
             {c.features.map((f, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "8px 10px", borderRadius: 8, background: "#12121a" }}>
+              <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "8px 10px", borderRadius: 8, background: "#f9fafb" }}>
                 <div style={{ width: 28, height: 28, borderRadius: 6, background: `${accent}12`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 1 }}>
                   <Star size={14} color={accent} />
                 </div>
                 <div>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: "#d0ccc4" }}>{f.label}</div>
-                  <div style={{ fontSize: 11, color: "#686058", marginTop: 1, lineHeight: 1.3 }}>{f.description}</div>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: "#1a2028" }}>{f.label}</div>
+                  <div style={{ fontSize: 11, color: "#6b7280", marginTop: 1, lineHeight: 1.3 }}>{f.description}</div>
                 </div>
               </div>
             ))}
@@ -56,8 +56,8 @@ export default function DemoWrapper() {
         </div>
 
         {/* Footer */}
-        <div style={{ padding: "16px 24px 20px", borderTop: "1px solid #1a1a24" }}>
-          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#484038", textAlign: "center" }}>
+        <div style={{ padding: "16px 24px 20px", borderTop: "1px solid #e5e7eb" }}>
+          <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9ca3af", textAlign: "center" }}>
             BUILT BY <span style={{ color: accent }}>LUMI</span> — LUMICLASS.APP
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function DemoWrapper() {
           {/* Phone chrome */}
           <div style={{
             width: 410, background: "#1a1a24", borderRadius: 40, padding: "12px 10px",
-            boxShadow: "0 0 0 1px #2a2a34, 0 20px 60px rgba(0,0,0,.5), 0 0 120px rgba(196,145,94,.04)"
+            boxShadow: "0 0 0 1px #d1d5db, 0 20px 60px rgba(0,0,0,.12), 0 0 80px rgba(0,0,0,.04)"
           }}>
             {/* Notch */}
             <div style={{ width: 120, height: 6, background: "#2a2a34", borderRadius: 3, margin: "0 auto 8px" }} />
@@ -89,20 +89,20 @@ export default function DemoWrapper() {
       </main>
 
       {/* ——— RIGHT SIDEBAR ——— */}
-      <aside style={{ width: 340, flexShrink: 0, background: "#0d0d14", borderLeft: "1px solid #1a1a24", position: "fixed", top: 0, right: 0, bottom: 0, overflowY: "auto", padding: "24px 20px" }}>
+      <aside style={{ width: 340, flexShrink: 0, background: "#ffffff", borderLeft: "1px solid #e5e7eb", position: "fixed", top: 0, right: 0, bottom: 0, overflowY: "auto", padding: "24px 20px" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           {c.salesCards.map((card, i) => {
             const IconComp = getIcon(card.icon);
             const isAdminCard = card.title === "Admin Dashboard";
             return (
-              <div key={i} style={{ background: "#12121a", border: "1px solid #1e1e28", borderRadius: 14, padding: "18px 16px" }}>
+              <div key={i} style={{ background: "#ffffff", border: "1px solid #e5e7eb", borderRadius: 14, padding: "18px 16px", boxShadow: "0 1px 3px rgba(0,0,0,.04)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
                   <div style={{ width: 36, height: 36, borderRadius: 10, background: `${accent}12`, display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <IconComp size={18} color={accent} />
                   </div>
-                  <h3 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 18, fontWeight: 600, color: "#fff", margin: 0 }}>{card.title}</h3>
+                  <h3 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 18, fontWeight: 600, color: "#1a2028", margin: 0 }}>{card.title}</h3>
                 </div>
-                <p style={{ fontSize: 12, color: "#787068", lineHeight: 1.6, margin: isAdminCard ? "0 0 14px" : 0 }}>{card.description}</p>
+                <p style={{ fontSize: 12, color: "#6b7280", lineHeight: 1.6, margin: isAdminCard ? "0 0 14px" : 0 }}>{card.description}</p>
                 {isAdminCard && (
                   <button onClick={() => window.dispatchEvent(new Event("open-admin"))} style={{
                     width: "100%", padding: "10px 0", borderRadius: 8, border: "none",
@@ -117,9 +117,9 @@ export default function DemoWrapper() {
           })}
 
           {/* CTA Card */}
-          <div style={{ background: `linear-gradient(135deg, ${accent}18, ${accentDark}08)`, border: `1px solid ${accent}30`, borderRadius: 14, padding: "22px 18px", textAlign: "center" }}>
-            <h3 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 22, fontWeight: 600, color: "#fff", margin: "0 0 6px" }}>{c.cta.heading}</h3>
-            <p style={{ fontSize: 13, color: "#a09888", margin: "0 0 16px", lineHeight: 1.4 }}>{c.cta.subheading}</p>
+          <div style={{ background: `linear-gradient(135deg, ${accent}10, ${accentDark}06)`, border: `1px solid ${accent}30`, borderRadius: 14, padding: "22px 18px", textAlign: "center" }}>
+            <h3 style={{ fontFamily: "'Instrument Serif', serif", fontSize: 22, fontWeight: 600, color: "#1a2028", margin: "0 0 6px" }}>{c.cta.heading}</h3>
+            <p style={{ fontSize: 13, color: "#6b7280", margin: "0 0 16px", lineHeight: 1.4 }}>{c.cta.subheading}</p>
             <a href={c.cta.buttonUrl} target="_blank" rel="noopener noreferrer" style={{
               display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 28px",
               borderRadius: 10, background: accent, color: "#fff", fontWeight: 700, fontSize: 14,
